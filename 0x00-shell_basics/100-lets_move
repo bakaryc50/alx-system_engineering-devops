@@ -1,2 +1,2 @@
 #!/bin/bash
-mv . -type f "[[:uppper:]]*"  /tmp/u
+mv . "[[:uppper:]]*"  /tmp/u
