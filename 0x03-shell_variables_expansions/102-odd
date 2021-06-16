@@ -1,0 +1,2 @@
+#!/bin/bash
+print awk 'NR % 2 != 0'
