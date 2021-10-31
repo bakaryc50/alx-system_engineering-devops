@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# This script displays the content of the current directory
+
+shopt -s nullglob
+
+for file in *
+do 
+	echo "${file#*-}"
+done
