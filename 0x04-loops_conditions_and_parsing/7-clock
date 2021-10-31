@@ -9,6 +9,6 @@ do
 	minute=1
 	while ((minute < 60))
 	do
-		ehco "$((minute++))"
+		echo "$((minute++))"
 	done
 done
