@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#
+# Repeat every two seconds
+
+sleep() {
+  ! read -rt "$1"
+} <> <(:)
+
+while true
+do
+  echo 'To infinity and beyond'
+  sleep 2
+done
