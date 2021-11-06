@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# 5-is_the_host_on_the_network is a script that pings an IP add passed as an argument
+
+if ! (($#))
+then
+	printf "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+	exit 2
+fi
+
+while (($#))
+do
+	ping -c 5 -- "$1"
+	shift
+done
