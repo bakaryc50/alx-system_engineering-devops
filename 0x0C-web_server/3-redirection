@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# installs nginx and configure it to listen on port 80 make it return a page with
+# "Hello World" in it
+# and Configure your Nginx server so that /redirect_me is
+# redirecting to another page.
+
+NYANCAT='https://www.youtube.com/watch?v=QH2-TGUlwu4'
+
+apt-get update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+chmod -R 755 /var/www
+
+sed -i '
+s@^\troot /var/www/html;$@&\n\trewrite ^/redirect_me '"${NYANCAT}"' permanent;@
+' /etc/nginx/sites-available/default
+
+echo 'Hello World' > /var/www/html/index.html
+
+service nginx start
