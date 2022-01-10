@@ -3,7 +3,7 @@
 # Install and configure HAProxy 1.5 on a new Ubuntu 16.04 server
 
 apt-get -y update
-apt-get -y install 'haproxy=1.5.*'
+apt-get -y install haproxy
 
 cat >> /etc/haproxy/haproxy.cfg << EOF
 backend web-backend
