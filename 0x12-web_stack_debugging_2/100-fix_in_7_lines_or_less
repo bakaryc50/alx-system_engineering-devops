@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#
 # Run NGINX as nginx listening to all active IPs on port 8080
 sed -i 's/\(listen \(\[::]:\)\?\)80/\18080/g' /etc/nginx/sites-enabled/default
 chmod 0644 /etc/nginx/nginx.conf
