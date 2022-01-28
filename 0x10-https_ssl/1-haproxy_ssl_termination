@@ -43,7 +43,7 @@ frontend web-frontend-http
         http-request set-header X-Forwarded-Proto http
         default_backend web-backend
 frontend web-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/c50itech.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.c50itech.tech.pem
         http-request set-header X-Forwarded-Proto https
         acl letsencrypt-acl path_beg /.well-known/acme-challenge/
         use_backend letsencrypt-backend if letsencrypt-acl
