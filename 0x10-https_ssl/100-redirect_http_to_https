@@ -1,5 +1,4 @@
-
-bal
+global
         # Number of connexion requested
         maxconn 2048
         # Maximum size of temporary DHE keys that are generated
