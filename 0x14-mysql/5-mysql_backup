@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# backup all databases and keep them safe
+# backup all databases and keep them safe place
 mysqldump --user=root --password="$1" --all-databases > 'backup.sql'
 tar -czf "$(date '+%0d-%0m-%Y').tar.gz" 'backup.sql'
